@@ -197,23 +197,38 @@ Step 8: End the program.
 ## PROGRAM
 ```
 #include <stdio.h>
-#include <string.h>
+
 int main() {
     char str1[100], str2[100];
+    int i = 0, flag = 0;
+
+    printf("Enter first string: ");
     scanf("%s", str1);
+
+    printf("Enter second string: ");
     scanf("%s", str2);
-    if (strcmp(str1, str2) == 0) {
-        printf("strings are same\n");
-    } 
-    else {
-        printf("strings are not same\n");
+
+    while (str1[i] != '\0' || str2[i] != '\0') {
+        if (str1[i] != str2[i]) {
+            flag = 1;
+            break;
+        }
+        i++;
     }
+
+    if (flag == 0)
+        printf("The strings are equal.\n");
+    else
+        printf("The strings are not equal.\n");
+
     return 0;
 }
+
 ```
 
 ## OUTPUT
- ![image](https://github.com/user-attachments/assets/c5cace70-0ff5-450f-b273-c023e13b9a20)
+
+![Screenshot 2025-05-31 121734](https://github.com/user-attachments/assets/44b93993-d8d2-4ee0-93ed-d68394f968ae)
 
 
 ## RESULT
